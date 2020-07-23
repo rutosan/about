@@ -3,7 +3,7 @@ html,body   {
   color: #ffffff;
 }
 
-html,body,h1,h2,h3,h4,p {
+body {
   margin: 0px;
   padding:0px;
 }
@@ -33,15 +33,20 @@ td {
 
 .header {
   text-align: center;
+  width: 100%;
   height: 100%;
   position: relative;
   background-image: url("img/金魚.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 50px;
   transition-duration: 1s;
+
 }
 
 .header p {
   transition-duration: 2s;
+  padding-right: 100px;
 
 }
 
