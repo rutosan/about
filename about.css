@@ -1,7 +1,6 @@
 html,body   {
   background-color: #000000;
   color: #ffffff;
-  transition-duration: 500ms;
 }
 
 html,body,h1,h2,h3,h4,p {
@@ -38,7 +37,12 @@ td {
   position: relative;
   background-image: url("img/金魚.png");
   margin-bottom: 50px;
-  
+  transition-duration: 1s;
+}
+
+.header p {
+  transition-duration: 2s;
+
 }
 
 .outline {
