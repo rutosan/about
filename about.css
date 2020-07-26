@@ -9,6 +9,7 @@ body {
 }
 
 
+
 h1 {
   position: absolute;
   top: 50%;
@@ -19,6 +20,7 @@ h1 {
 
 h2 {
   margin-bottom: 50px;
+  font-size: 32px;
 }
 
 
@@ -26,29 +28,57 @@ td {
   padding: 5px;
 }
 
-  img{
+img{
   width: 320px;
   height: 250px;
-  }
+}
 
 .header {
   text-align: center;
   width: 100%;
   height: 100%;
-  position: relative;
   background-image: url("img/金魚.png");
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 50px;
-  transition-duration: 1s;
-
+  transition-duration: 3s;
+  
 }
 
 .header p {
-  transition-duration: 2s;
   padding-right: 100px;
-
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  margin-right: 20px;
+  margin-top: 100px;
+}
+
+li {
+  transition-duration: 3s;
+}
+
+li p {
+  margin: 0;
+  padding: 10px 0px;
+  transition-duration: 3s;
+}
+
+li:hover {
+  border: 1px solid #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+
 
 .outline {
   width: 200px;
@@ -60,7 +90,6 @@ td {
 .profile{
   display: inline-block;
   text-align: left;
-  
 }
 
 
