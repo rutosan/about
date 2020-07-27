@@ -16,6 +16,7 @@ h1 {
   left: 50%;
   -webkit-transform : translate(-50%,-50%);
   transform : translate(-50%,-50%);
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 h2 {
@@ -47,6 +48,7 @@ img{
 
 .header p {
   padding-right: 100px;
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 ul {
@@ -59,17 +61,17 @@ ul {
 }
 
 li {
-  transition-duration: 3s;
+  transition-duration: 0.3s;
+  margin-top: 30px;
 }
 
 li p {
   margin: 0;
   padding: 10px 0px;
-  transition-duration: 3s;
 }
 
 li:hover {
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
 }
 
 a {
@@ -105,11 +107,12 @@ a {
   display:block;
   width: 820px;
   margin-bottom: 50px;
+  float: left;
   
 }
 
 .content img{
-  float: left;
+  margin-top: 50px;
   margin-right: 50px; 
   position: relative;
   display: inline-block;
@@ -119,8 +122,8 @@ a {
 .rigt img{
   float: right;
   margin-left: 50px;
+  margin-right: 0;
 }
-
 
 
 .content h3 {
