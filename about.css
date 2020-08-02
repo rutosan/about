@@ -42,7 +42,6 @@ img{
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 50px;
-  transition-duration: 3s;
   
 }
 
@@ -61,7 +60,6 @@ ul {
 }
 
 li {
-  transition-duration: 0.3s;
   margin-top: 30px;
 }
 
@@ -108,8 +106,8 @@ a {
   width: 820px;
   margin-bottom: 50px;
   float: left;
-  
 }
+
 
 .content img{
   margin-top: 50px;
@@ -153,7 +151,6 @@ a {
   margin-left: 50px;
   visibility: hidden;
   opacity: 0;
-  
   transition-property: visibility, opacity;
 
 }
@@ -163,4 +160,14 @@ a {
   opacity: 1;
   transition-delay: 0.5s;
   transition-duration: 0.5s;
+}
+
+content_reason h3 p  {
+  width: 1000px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 75px;
+  margin-left: 50px;
+  float: left;
+
 }
