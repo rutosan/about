@@ -5,18 +5,27 @@
     <title>About Me</title>
     <link rel="stylesheet" href="about.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/css/drawer.min.css">
   </head>
  
   <body>
     <div class="header">
       <div class="outline">
        <div class="profile">
-          <h2 class="name">About Me</h2>
-          <aside>
-            <nav>
-              <ul>
-              <li>
-                <a href="https://satsan.work">
+         <div id="menu-btn">
+           <img src="img/menu.png" alt="">
+         </div>
+         <h2>About Me</h2>          
+         <aside id="side-menu">
+           <div id="close-btn">
+            <img src="img/close.png" alt="">
+           </div>
+           <nav>
+             <ul>
+               <li>
+                 <a href="https://satsan.work">
                   <p>HOME</p>
                 </a>
               </li>
@@ -26,13 +35,13 @@
                 </a>
               </li>
               <li>
-                 <a href="https://satsan.work/work">
-                   <p>MyWork</p>
-                  </a>
+                <a href="https://satsan.work/work">
+                  <p>MyWork</p>
+                </a>
               </li>
-              </ul>
-            </nav>
-          </aside>
+            </ul>
+          </nav>
+        </aside>
         </div>
       </div>
     </div>
@@ -69,42 +78,53 @@
 
    <!-- 仕事のポリシー -->
     <div class="contents">
+      
       <h2>仕事の理念</h2>
+
+
       <div class="content">
         <img src="img/コミュニケーション.png">
-            <h3>Communication</h3>
-           <p>
-             ヘルプデスクの仕事ではお客様の問題をいかに早く<br>
-             解決することを第一にしておりました。<br>
-             そのために相手の立場になって考えるように心掛け<br>
-             相手の話したいことを引き出せるよう取り組んでおりました。             
-           </p>
+        <div class="text">
+         
+            <h3 id="policy-title">Communication</h3>
+        
+            <p id="text-contents">
+              ヘルプデスクの仕事ではお客様の問題をいかに早く<br>
+              解決することを第一にしておりました。<br>
+              そのために相手の立場になって考えるように心掛け<br>
+              相手の話したいことを引き出せるよう取り組んでおりました。             
+            </p>
+        </div>
      </div>
 
-    <div class="content rigt">
+    <div class="content">
       <img src="img/考える人.png">
-            <h3 class="left">Looking Ahead</h3>
-             <p class="left">テレビ局のADとして働いていた頃から<br>
-                仕事の効率化を図るためにチーム全体と各個人ごとの<br>
-                進捗などを意識することで<br>
-                仕事を自分で見つける<br>
-                「先を見据えた行動」が身につきました。<br>
-                この習慣は今の会社でも生かしており<br>
-                部署の残業時間の削減などの結果につながっております。<br>
-             </p>
+      <div class="text">
+        <h3 id="policy-title">Looking Ahead</h3>
+        <p id="text-contents">テレビ局のADとして働いていた頃から<br>
+          仕事の効率化を図るためにチーム全体と各個人ごとの<br>
+          進捗などを意識することで<br>
+          仕事を自分で見つける<br>
+          「先を見据えた行動」が身につきました。<br>
+          この習慣は今の会社でも生かしており<br>
+          部署の残業時間の削減などの結果につながっております。<br>
+        </p>
+      </div>
     </div>
     
 
 
     <div class="content">
       <img src="img/ToDOリスト.png">
-             <h3>Progress Management</h3>
-            <p>仕事をする前に必ず自分のやるべきタスクを<br>
-              リストアップをして進捗の整理をします。<br>
-              「やれませんでした」という結果にならないよう<br>
-              進捗から未実施のタスクがないか常に気を配ります。<br>
-              また、実行が不可能と判断した場合は、<br>
-              明確な理由と代替案を必ずご用意いたします。</p>
+      <div class="text">
+        <h3 id="policy-title">Progress Management</h3>
+        <p id="text-contents">仕事をする前に必ず自分のやるべきタスクを<br>
+          リストアップをして進捗の整理をします。<br>
+          「やれませんでした」という結果にならないよう<br>
+          進捗から未実施のタスクがないか常に気を配ります。<br>
+          また、実行が不可能と判断した場合は、<br>
+          明確な理由と代替案を必ずご用意いたします。</p>
+      </div>
     </div>
 
   </div>
@@ -112,24 +132,43 @@
   <!-- ここまで -->
 
   <!--WEBに興味をもった理由 -->
-  <div class="contents">
-    <h2>将来</h2>
-      <div class="content_reason">
-        <h3>高校時代</h3>
-          <p>文化祭の出し物の映画をきっかけに制作の仕事へ関心を持つ</p>
 
-          <h3>あああaaaaaa</h3>
-          <p>aaああああああああああああああああああああ</p>
-
-        </div>
-
-      </div>
-
-    
-  </div>
   <!-- ここまで -->
 
+<script>
+  if (window.matchMedia( '(min-width: 800px)' ).matches) {
+    $(function () {
+      $('.content').hover(
+      function() {
+        $(this).find('#text-contents').fadeIn();
+        $(this).find('#policy-title').fadeOut();
+      },
+      function() {
+        $(this).find('#policy-title').fadeIn();
+        $(this).find('#text-contents').fadeOut();
+      }
+    );
+  });
+}
+else {
+  $(function () {
+    $('#menu-btn').click(
+      function() {
+        $('#side-menu').fadeIn();
+        $('#menu-btn').hide();
+    });
 
+    $('#close-btn').click(
+      function() {
+        $('#menu-btn').fadeIn();
+        $('#side-menu').hide();
+    });
+
+      
+  });
+}
+
+</script>
 
 
 
