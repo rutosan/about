@@ -14,7 +14,7 @@
     <div class="header">
       <div class="outline">
        <div class="profile">
-         <div id="menu-btn">
+         <div id= "menu-btn">
            <img src="img/menu.png" alt="">
          </div>
          <h2>About Me</h2>          
@@ -32,11 +32,6 @@
               <li>
                 <a href="https://satsan.work/about">
                   <p>about</p>
-                </a>
-              </li>
-              <li>
-                <a href="https://satsan.work/work">
-                  <p>MyWork</p>
                 </a>
               </li>
             </ul>
@@ -78,21 +73,6 @@
 
 
 <script>
-  if (window.matchMedia( '(min-width: 800px)' ).matches) {
-    $(function () {
-      $('.content').hover(
-      function() {
-        $(this).find('#text-contents').fadeIn();
-        $(this).find('#policy-title').fadeOut();
-      },
-      function() {
-        $(this).find('#policy-title').fadeIn();
-        $(this).find('#text-contents').fadeOut();
-      }
-    );
-  });
-}
-else {
   $(function () {
     $('#menu-btn').click(
       function() {
@@ -108,7 +88,6 @@ else {
 
       
   });
-}
 
 </script>
 
