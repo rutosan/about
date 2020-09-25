@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>About Me</title>
+    <title>宮本 知のプロフィール</title>
     <link rel="stylesheet" href="about.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -11,12 +11,9 @@
   </head>
  
   <body>
-    <div class="header">
+    <div id="top">
       <div class="outline">
        <div class="profile">
-         <div id= "menu-btn">
-           <img src="img/menu.png" alt="">
-         </div>
          <h2>Satoru Miyamoto</h2>          
          <aside id="side-menu">
            <div id="close-btn">
@@ -41,77 +38,57 @@
       </div>
     </div>
 
-<!-- あいさつ -->
-    <div class="box">
-      <div class="box_contents">
-        <img src="img/myimage.jpeg" alt="">
-        <div class="box_text">
-          こんにちわ
+    <!-- あいさつ -->
+    <div class="contents">
+      <div class="balloon">
+        <div class="faceicon">
+          <img src="img/myimage.jpeg" alt="">
+        </div>
+        <div class="balloon-left">
+          <p>はじめまして!!「MyOwnRoom」を製作しました宮本 知です！</p>
+          <p>僕自身のプロフィールやプログラミングの勉強について紹介します!</p>
         </div>
       </div>
+      <!-- あいさつここまで -->
+      <table>
+          <tr><th>年齢</th><td>24歳(1996年1月31日生まれ)</td></tr>
+          <tr><th>出身地</th><td>東京都</td></tr>
+          <tr><th>経歴</th><td>法政大学(生命科学部生命機能科) <br>→ 株式会社ダイジョブス(テレビ局のAD)<br> → IIJエンジニアリング(インフラエンジニア/ヘルプデスク)</td></tr>
+          <tr><th>趣味</th><td>筋トレ、ボルダリング、テニス、一人旅,カメラ</td></tr>
+          <tr><th>将来の夢</th><td>ウユニ塩湖を見に行く</td></tr>
+          <tr><th>プログラミングスキル</th><td>HTML,CSS,jQuery,Bootstrap,Ruby on Rails</td></tr>
+          <tr><th>学習方法</th><td>独学(オンライン学習サイトを利用)<br>
+            ・Progate:<a href="https://prog-8.com">https://prog-8.com</a><br>
+            ・ドットインストール：<a href="https://dotinstall.com">https://dotinstall.com</a><br>
+          </td></tr>
+          <tr><th>使用PC</th><td>MacBook Pro</td></tr>
+          <tr><th>Portfolio</th><td><a href="https://satsan.work">My Own Room</a><br></td></tr>
+      </table>
     </div>
-
-
-<!-- あいさつここまで -->
-
-
-  <!-- プロフィール-->
-  <div class="contents">
-    <h2>経歴</h2>
-    <table>
-      <tr>
-        <td>2018年</td>
-        <td>3月</td>
-        <td>法政大学生命科学部を卒業</td>
-      </tr>
-
-      <tr>
-        <td>2018年</td>
-        <td>4月</td>
-        <td>TBSテレビのADとして株式会社ダイジョブスへ入社<br>
-        </td>
-      </tr>
-
-      <tr>
-        <td>2018年</td>
-        <td>7月</td>
-        <td>株式会社ダイジョブスを退社</td>
-      </tr>
-      <tr>
-        <td>2018年</td>
-        <td>8月</td>
-        <td>株式会社IIJエンジニアリングへ入社</td>
-      </tr>
-    </table>
-  </div>
-<!-- ここまで -->
-
-
-<script>
-  $(function () {
-    $('#menu-btn').click(
-      function() {
-        $('#side-menu').fadeIn();
-        $('#menu-btn').hide();
-    });
-
-    $('#close-btn').click(
-      function() {
-        $('#menu-btn').fadeIn();
-        $('#side-menu').hide();
-    });
-
-      
-  });
-
-</script>
-
-
-
-
+        
+    <script>
+      $(function () {
+        $('#menu-btn').click(
+          function() {
+            $('#side-menu').fadeIn();
+            $( '#menu-btn').hide();
+          });
+        $('#close-btn').click(
+          function() {
+            $('#menu-btn').fadeIn();
+            $('#side-menu').hide();
+          });
+      });
+    </script>
   </body>
-  <footer>
 
+  <footer>
+    <nav class="">
+      <ul class="">
+        <li class=""><a href="#top" class="">TOPへ</a></li>
+        <li class=""><a href="https://satsan.work" class="">HOME</a></li>
+      </ul>
+    </nav>
   </footer>
 
 </html>

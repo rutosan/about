@@ -9,18 +9,16 @@
     padding:0px;
   }
   
-  
-  .header {
+  #top {
     text-align: center;
     width: 100%;
     height: 100%;
     background-image: url("img/金魚.png");
     background-repeat: no-repeat;
     background-size: cover;
-    
   }
   
-  .header p {
+  #top p {
     padding-right: 50px;
     font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   }
@@ -50,7 +48,6 @@
     display: none;
   }
 
-  
   li {
     margin-top: 30px;
   }
@@ -70,13 +67,10 @@
     font-size: 24px;
   }
   
-  
-  
   h2 {
     margin-bottom: 50px;
     font-size: 32px;
   }
-  
   
   td {
     padding: 5px;
@@ -86,90 +80,125 @@
     width: 320px;
     height: 250px;
   }
+
+/* あいさつ */
   
-  
-
-
-
-
-  .box {
-    width: 100%;
-    height: 30%;
-    background-color: #ffffff;
-  }
-  
-  .box_contents  {
-    width: 70%;
-    height: 100%;
-    background-color: blue;
+  .contents {
+    width: 60%;
+    background-color:#ffffff;
     margin: 0 auto;
     bottom: 0;
-    display: flex;
+  }
+
+  .balloon {
+    width: 100%;
+    margin: 1.5em 0;
+    overflow: hidden;
+    padding-left: 1.5em;
+    padding-top: 1.5em;
+  }
+
+  .balloon .faceicon {
+    float: left;
+    margin-right: -90px;
+    width: 80px;
   }
   
-  .box_contents img {
-    width: 70px;
-    height: 70px;
+  .balloon .faceicon img{
+    width: 100%;
+    height: auto;
+    border: solid 1px #d7ebfe;
     border-radius: 50%;
   }
   
-  .box_text {
-    width: 80%;
-    height: 70%;
-    background-color: red;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  .contents{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 100px auto;
-    
-    }
-  
-  .content{
-    display:block;
-    width: 820px;
-    margin-bottom: 50px;
+  .balloon .chatting {
+    width: 100%;
     display: flex;
   }
   
-  .text {
-    width: 320px;
-    position: relative;
-    margin: 30px;
-  }
-  
-  .content img{
-    margin: 30px;
+  .balloon-left {
+    max-width: 60%;
     display: inline-block;
-    vertical-align: middle;
+    position: relative; 
+    margin: 0.5em 15px 1.5em 105px;
+    padding: 17px 13px;
+    border-radius: 12px;
+    background: #b0c4de;
+    color: #000000;
   }
   
-  
-  
-  #policy-title {
+  .balloon-left:after {
+    content: "";
+    display: inline-block;
     position: absolute;
-    padding: 100px;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
+    top: 20px; 
+    left: -24px;
+    border: 12px solid transparent;
+    border-right: 12px solid #b0c4de;
   }
   
-  #text-contents {
-    vertical-align: middle;
-    display: none;
+  .balloon-left p {
+    margin: 0;
+    padding: 0;
   }
   
-  }
+  /* あいさつここまで */
   
+  /* プロフィール表ここから */
+table {
+  background-color: #c0c0c0;
+  color: #000000;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+th {
+  background-color: yellow;
+  width: 20%;
+  margin: 0;
+  padding: 10px;
+}
+
+td a {
+  color: #1e90ff;
+  font-size: 16px;
+  margin-left: 0.5em;
+}
+
+td {
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+  background-color: #ffffff;
+}
+/* プロフィール表ここまで */
+
+/* footerここから */
+footer {
+  height: 10%;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+
+footer li {
+  margin: 10px;
+  float: right;
+  padding: 10px;
+}
+footer a {
+  font-size: 16px;
+}
+
+/* footerここまで */
+}
   
   /********* レスポンシブデザインここから ******************************/
   
@@ -183,165 +212,197 @@
       margin: 0px;
       padding:0px;
     }
-    .header {
+    
+    #top {
       text-align: center;
       width: 100%;
       height: 100%;
       background-image: url("img/金魚.png");
       background-repeat: no-repeat;
       background-size: cover;
-
-      
+      display: flex;
+      align-items: flex-end;
     }
     
-    .header p {
-      padding-right: 100px;
+    #top p {
       font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     }
     
-    /* ヘッダーメニュー */
-    #menu-btn {
-      width: 50px;
-      height: 50px;
-      position: fixed;
-      right: 10px;
-      top: 10px;
-      z-index: 0;
-    }
-
-    #close-btn {
-      width: 30px;
-      height: 30px;
-      float: left;
-    }
-
-
-
-    #side-menu {
-      float: right;
-      background-color: rgba(0,30,67, 0.8);
-      position: fixed;
-      right: 0;
-      top: 0;
-      width: 200px;
-      height: 100%;
-      z-index: 1;
-      display: none;
-    }
-
     .outline {
-      width: 200px;
-      float: right;
-      margin: 0px;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      text-align: left;
     }
     
-    .profile{
-      display: inline-block;
-      float: right;
-      position: relative;
-      margin-top: 50px;
-  
-    }
-
-    nav {
-      width: 150px;
-    }
-
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
       overflow: hidden;
+      margin-right: 20px;
+      margin-top: 50px;
     }
-    
+  
+    #menu-btn, #close-btn  {
+      display: none;
+    }
+  
     li {
-      margin-top: 15px;
+      margin-top: 10px;
     }
     
     li p {
       margin: 0;
       padding: 10px 0px;
-      font-size: 24px;
     }
+    
+    li:hover {
+      border: 2px solid #ffffff;
+    }
+    
     a {
       text-decoration: none;
       color: #ffffff;
       font-size: 24px;
     }
     
-
-/* メニューここまで */
-
     h2 {
+      margin-bottom: 50px;
       font-size: 32px;
-      text-align: center;
-      z-index: 0;
-    }
-    
-    img{
-      width: 80%;
-      height: auto;
-    }
-    table {
-      margin-left: 10%;
-      font-size: 16px;
-      margin: 0;
-      padding: 0;
     }
     
     td {
       padding: 5px;
-      width: auto;
     }
-
     
+    img{
+      width: 320px;
+      height: 250px;
+    }
+  
+  /* あいさつ */
     
-    
-      .contents{
-      align-items: center;
-      margin: 0px;
-      float: left;
-      }
-
-    
-    .content{
-      display:block;
+    .contents {
       width: 100%;
-      margin-bottom: 50px;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .text {
-      width: 100%;
-      position: relative;
-      margin: 0px;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .content img{
-      display: inline-block;
-      vertical-align: middle;
       margin: 0 auto;
+      bottom: 0;
+    }
+  
+    .balloon {
+      width: 100%;
+      margin: 1.5em 0;
+      overflow: hidden;
+      padding-left: 1.5em;
+      padding-top: 1.5em;
     }
     
+    .q_balloon {
+      width: 100%;
+      margin: 1.5em 0;
+      overflow: hidden;  
+    }
     
+  
+    .balloon .faceicon {
+      float: left;
+      margin-right: -90px;
+      width: 80px;
+    }
     
-    #policy-title {
-      padding-top: 0px;
+    .balloon .faceicon img{
+      width: 100%;
+      height: auto;
+      border: solid 1px #d7ebfe;
+      border-radius: 50%;
+    }
+    
+    .balloon .chatting {
+      width: 100%;
+      display: flex;
+    }
+    
+    .balloon-left {
+      max-width: 60%;
       display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      font-size: 32px;
+      position: relative; 
+      margin: 0.5em 15px 1.5em 105px;
+      padding: 17px 13px;
+      border-radius: 12px;
+      background: #b0c4de;
+      color: #000000;
     }
     
-    #text-contents {
-      vertical-align: middle;
+    .balloon-left:after {
+      content: "";
       display: inline-block;
-      font-size: 16px;
-      padding-left: 50px;
+      position: absolute;
+      top: 20px; 
+      left: -24px;
+      border: 12px solid transparent;
+      border-right: 12px solid #b0c4de;
     }
     
+    .balloon-left p {
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* あいさつここまで */
+    
+    /* プロフィール表ここから */
+  table {
+    background-color: #c0c0c0;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
   
+  th {
+    background-color: yellow;
+    width: 20%;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  td a {
+    color: #1e90ff;
+    font-size: 16px;
+    margin-left: 0.5em;
+  }
+  
+  td {
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+    background-color: #ffffff;
+  }
+  /* プロフィール表ここまで */
+  
+  /* footerここから */
+  footer {
+    height: 10%;
+  }
+  
+  footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-right: 20px;
+    margin-top: 50px;
+  }
+  
+  footer li {
+    margin: 10px;
+    float: right;
+    padding: 10px;
+  }
+  footer a {
+    font-size: 16px;
+  }
+  
+  /* footerここまで */
+  
+}
